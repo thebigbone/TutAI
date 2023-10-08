@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ansible Tutorial</title>
+    <meta name="description" content="A simple tutorial on Ansible, including basic commands." />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        code {
+            background-color: #f2f2f2;
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            border: none;
+            padding: 5px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ansible Tutorial</h1>
+    <p>Welcome to the Ansible tutorial! Ansible is an open-source automation tool that allows you to automate tasks on multiple servers. In this tutorial, we will cover some of the basic commands used in Ansible.</p>
+    <h2>Getting Started</h2>
+    <ul>
+        <li><strong>Install Ansible:</strong> You can install Ansible on your local machine using pip or yum. For more information, visit <a href="https://www.ansible.com/download">the Ansible website</a>.</li>
+        <li><strong>Create an inventory file:</strong> An inventory file is used to define the hosts and variables used in your Ansible playbook. Create a new file called "inventory" in the same directory as your playbook. Here's an example:</p> ```yaml [webservers] server1 ansible_host=192.168.0.100 server2 ansible_host=192.168.0.101 [dbservers] db1 ansible_host=192.168.0.102 db2 ansible_host=192.168.0.103 ``` </li>
+    </ul>
+    <h2>Basic Commands</h2>
+    <ul>
+        <li><strong>ansible-playbook:</strong> This command is used to run an Ansible playbook. Here's an example:</p> ```yaml ansible-playbook -i inventory playbook.yml ``` This will run the "playbook.yml" playbook on the servers defined in the "inventory" file.</li>
+        <li><strong>ansible-inventory:</strong> This command is used to list the hosts and variables defined in an inventory file. Here's an example:</p> ```yaml ansible-inventory -i inventory ``` This will display a list of all the hosts and variables defined in the "inventory" file.</li>
+        <li><strong>ansible-var:</strong> This command is used to view the value of a variable defined in an inventory file. Here's an example:</p> ```yaml ansible-var -i inventory webservers.db1_user ``` This will display the value of the "db1\_user" variable for the "webservers.db1" host.</li>
+    </ul>
+    <h2>Conclusion</h2>
+    <p>In this tutorial, we covered some of the basic commands used in Ansible. With Ansible, you can automate tasks on multiple servers and

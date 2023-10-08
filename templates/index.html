@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Generator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <h1><span class="highlight">Tutorial</span> Generator</h1>
+            <p>Your AI-Powered Tutorial Assistant</p>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Submit Instructions</h2> <br>
+            <form id="instruction-form" method="POST" action="result">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" rows="5" required></textarea>
+
+                <button type="submit"><b>Submit</b></button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
